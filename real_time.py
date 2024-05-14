@@ -5,8 +5,8 @@ from crepe import predict
 # Constants
 CHUNK_SIZE = 1024
 SAMPLE_RATE = 16000  # Model expects 16 kHz sample rate
-MODEL_CAPACITY = 'full'  # Choose model capacity (e.g., 'tiny', 'small', 'medium', 'large', 'full')        
-STEP_SIZE = 10  # Step size for pitch estimation in milliseconds
+MODEL_CAPACITY = 'full'  # Choose model capacity (e.g., 'tiny', 'small', 'medium', 'large', 'full')        : chose full for the default purposes 
+STEP_SIZE = 10  # Step size for pitch estimation in milliseconds , 100 doesnt work well not aware for the resons 
 
 # Initialize PyAudio
 audio_interface = pyaudio.PyAudio()
@@ -20,7 +20,7 @@ print("CREPE: Starting real-time pitch estimation...")
 
 try:
     while True:
-        # Read audio input from the microphone 
+        # Read audio input from the microphone , default 0 ?
         audio_data = np.frombuffer(stream.read(CHUNK_SIZE), dtype=np.int16)
 
         # Perform pitch estimation

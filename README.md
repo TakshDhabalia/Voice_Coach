@@ -14,3 +14,8 @@ this problme statement has a lot of steps to break down so lets see it in detail
 
 
 Focusing on these smaller Problme statemnsts help us pick pace on the overall problme statement .  
+
+
+Update 1:
+
+i just made the crepe model run on the runtime file taking in input from the audio device set and to make it spit out values of its confidence and the Hz its calculating 
